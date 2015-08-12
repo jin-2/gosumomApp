@@ -1,4 +1,45 @@
 (function(window, document, undefined) {
+	
+    var $win, doc_H, $fullPageWrap, $fullPageInner, fullPageInner_H, margin_box, $popupLayer;
+
+    // 초기 설정을 마무리하면 callback Fn 실행
+    initSetting(function() {
+        $win.on('resize', setHeight);
+    });
+
+    function initSetting(fn) {
+        // 브라우저 높이 구하기
+        $win = $(window);
+        // setHeight 함수 실행
+        setHeight();
+        // callback Fn 이 있으면 실행
+        fn ? fn() : null;
+    }
+
+    /**
+     * 브라우저 창 높이 값을 구해서 .picture, .aside 요소 높이 값을 설정
+     * .picture img 요소에 margin-top 값 설정
+     * 브라우저 창 조정 시마다 호출되는 함수
+     */
+    function setHeight() {
+        doc_H = $win.height();
+        // .picture, .aside 요소에 height 속성 값을 doc_H 설정
+        if (!$fullPageWrap) { $fullPageWrap = $('.full_page'); }
+        $fullPageWrap.css('height', doc_H);
+        // .picture img 요소의 높이 값을 img_H 에 참조
+        if (!$fullPageInner) { $fullPageInner = $fullPageWrap.find('.full_page_inner'); }
+        fullPageInner_H = $fullPageInner.height();
+        console.log(fullPageInner_H);
+        // .picture img 요소에 유동적으로 margin-top 적용
+        margin_box = ( doc_H - fullPageInner_H ) / 2;
+        // $img 참조 요소에 margin-top 값을 margin-_box 값으로 설정
+        $fullPageInner.css({
+        	'padding-top': margin_box,
+        	'padding-bottom': margin_box
+        });
+    }
+
+
 
 }(window, document));
 
