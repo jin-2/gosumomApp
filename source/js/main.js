@@ -16,22 +16,29 @@
 		fn ? fn() : null;
 	}
 
+	
+
 	function setHeight() {
 		doc_H = $win.height();
 		doc_W = $win.width();
+		
 		if (!$fullPageWrap) { $fullPageWrap = $('.full_page'); }
-		$fullPageWrap.css({
-			'height' : doc_H,
-			'width' : doc_W
-		});
+		if( fullPageInner_H < doc_H ){
+			$fullPageWrap.css({
+				'height' : doc_H
+				// 'width' : doc_W
+			});
+		}
+		
 		if (!$fullPageInner) { $fullPageInner = $fullPageWrap.find('.full_page_inner'); }
 		fullPageInner_H = $fullPageInner.height();
-		console.log(fullPageInner_H);
 		margin_box = ( doc_H - fullPageInner_H ) / 2;
+		
 		$fullPageInner.css({
 			'padding-top': margin_box,
 			'padding-bottom': margin_box
 		});
+		
 	}
 
 	var $canvasWrap = $('.canvas_off_wrap');
