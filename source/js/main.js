@@ -1,34 +1,71 @@
 (function(window, document, undefined) {
 	
-    var $win, doc_H, $fullPageWrap, $fullPageInner, fullPageInner_H, margin_box;
+	var $win, doc_H, doc_W, $fullPageWrap, $fullPageInner, fullPageInner_H, margin_box;
 
-    // 초기 설정을 마무리하면 callback Fn 실행
-    initSetting(function() {
-        $win.on('resize', setHeight);
-    });
+	// 초기 설정을 마무리하면 callback Fn 실행
+	initSetting(function() {
+		$win.on('resize', setHeight);
+	});
 
-    function initSetting(fn) {
-        // 브라우저 높이 구하기
-        $win = $(window);
-        // setHeight 함수 실행
-        setHeight();
-        // callback Fn 이 있으면 실행
-        fn ? fn() : null;
-    }
+	function initSetting(fn) {
+		// 브라우저 높이 구하기
+		$win = $(window);
+		// setHeight 함수 실행
+		setHeight();
+		// callback Fn 이 있으면 실행
+		fn ? fn() : null;
+	}
 
-    function setHeight() {
-        doc_H = $win.height();
-        if (!$fullPageWrap) { $fullPageWrap = $('.full_page'); }
-        $fullPageWrap.css('height', doc_H);
-        if (!$fullPageInner) { $fullPageInner = $fullPageWrap.find('.full_page_inner'); }
-        fullPageInner_H = $fullPageInner.height();
-        console.log(fullPageInner_H);
-        margin_box = ( doc_H - fullPageInner_H ) / 2;
-        $fullPageInner.css({
-        	'padding-top': margin_box,
-        	'padding-bottom': margin_box
-        });
-    }
+	function setHeight() {
+		doc_H = $win.height();
+		doc_W = $win.width();
+		if (!$fullPageWrap) { $fullPageWrap = $('.full_page'); }
+		$fullPageWrap.css({
+			'height' : doc_H,
+			'width' : doc_W
+		});
+		if (!$fullPageInner) { $fullPageInner = $fullPageWrap.find('.full_page_inner'); }
+		fullPageInner_H = $fullPageInner.height();
+		console.log(fullPageInner_H);
+		margin_box = ( doc_H - fullPageInner_H ) / 2;
+		$fullPageInner.css({
+			'padding-top': margin_box,
+			'padding-bottom': margin_box
+		});
+	}
+
+	var $canvasWrap = $('.canvas_off_wrap');
+	$('.show_side_content').click(function() {
+		var _condition = $canvasWrap.hasClass('show_content');
+		console.log(_condition);
+		if( !_condition ){
+			$('.canvas_off_wrap').addClass('show_content');
+		}else{
+			$('.canvas_off_wrap').removeClass('show_content');
+		}
+		
+	});
+
+	// 플레이스홀더 공통사용
+	$('.placeholder_wrap input, .placeholder_wrap textarea').focus(function(){
+		$(this).keydown(function(){
+			$(this).siblings().find('.placeholder').hide();
+		});
+	});
+	$('.placeholder_wrap input, .placeholder_wrap textarea').focusout(function(){
+		if($(this).val().length == 0){
+			$(this).siblings().find('.placeholder').show();
+		}
+	});
+
+	// 공통사용 value 있을 때 플레이스홀더 숨기기
+	$('.placeholder_wrap').each(function(){
+		var input_text = $('input', this);
+		if( input_text.val() ){
+			input_text.siblings('label').find('.placeholder').hide();
+		}
+
+	});
 
 
 

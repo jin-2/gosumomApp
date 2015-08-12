@@ -13,26 +13,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 </head>
-<body>
+<body class="login_bg">
 
-<div class="page full_page">
-	<section class="content_login full_page_inner">
+<div class="page full_page canvas_off_wrap">
+	<!-- 로그인 메인 -->
+	<section class="content_login full_page_inner canvas_off_main">
 		<h1 class="title"><img src="../img/login_header.png" alt="고수맘 1등 주부 알바 마켓 - 고수맘 서비스는 여성만 이용 가능한 서비스입니다."></h1>
 		<a href="#" class="button_policy common_bg">이용약관 자세히 보기</a>
 		<form action="#">
 			<fieldset class="login_form">
 				<div class="placeholder_wrap">
 					<span class="icon_mail common_bg"></span>
-					<label for=""><span class="placeholder">Email address</span></label>
-					<input type="email" name="" id="" placeholder="" value="">
+					<label for="login_email_label"><span class="placeholder">Email address</span></label>
+					<input type="email" name="" id="login_email_label" placeholder="" value="gosumom@">
 				</div>
-				<div class="placeholder_wrap">
+				<div class="placeholder_wrap last">
 					<span class="icon_lock common_bg"></span>
-					<label for=""><span class="placeholder">Password</span></label>
-					<input type="password" name="" id="" placeholder="" value="">
+					<label for="login_password_label"><span class="placeholder">Password</span></label>
+					<input type="password" name="" id="login_password_label" placeholder="" value="">
 				</div>
 				<div class="login_additional">
-					<a href="#" class="forget_password">비밀번호를 잊으셨나요?</a>
+					<a href="#" class="show_side_content forget_password">비밀번호를 잊으셨나요?</a>
 					<span class="dcheck id_save">
 						<input type="checkbox" id="id_save" name="id_save" value="" >
 						<label for="id_save"><em></em>아이디 저장하기</label>
@@ -59,7 +60,27 @@
 			</a>
 		</div>
 		<div class="buttons_center"><a href="#" class="button_round">처음오셨나요? 회원가입</a></div>
+
+		<!-- 비밀번호 찾기 -->
+		<div class="content_password_find canvas_off_side">
+			<div class="top_move">
+				<a href="#" class="show_side_content button_back common_bg">로그인 페이지 이동</a>
+			</div>
+			<form action="#">
+				<fieldset class="login_form">
+					<p class="guide">가입하신 이메일 주소로  임시 비밀번호를 보내드립니다. <br>임시비밀번호는 추후 반드시 재 설정해 주세요. </p>
+					<div class="placeholder_wrap">
+						<span class="icon_mail common_bg"></span>
+						<label for=""><span class="placeholder">가입하신 이메일 주소를 입력해주세요.</span></label>
+						<input type="email" name="" id="" placeholder="" value="">
+					</div>
+					<button type="submit" class="button_flat">이메일 보내기</button>
+				</fieldset>
+			</form>
+		</div>
+		<!-- //비밀번호 찾기 -->
 	</section>
+	<!-- //로그인 메인 -->
 </div>
 
 <script src="../js/main.js"></script>
