@@ -109,18 +109,22 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   1. common
-	1-a. button
-	1-b. checkbox, radio
-	1-c. canvas-off
-   2. page
-	2-a. login
-	2-a-1. password find
+	Author's custom styles
+	1. common
+		1-a. button
+		1-b. checkbox, radio
+		1-c. canvas-off
+		1-d. layout
+	2. layout
+		2-a. header
+		2-b. footer
+	3. page - login
+		3-2. page - password find
+	4. page - main
    ========================================================================== */
 /*
  * 1. common
- */
+ **************************************/
 img{
 	max-width:100%;
 }
@@ -133,11 +137,73 @@ div, input, select{
 	overflow: hidden;
 	background: url(../img/common.png) no-repeat;
 	background-size: 250px;
+	text-indent: -9999px;
 }
-input{
+input, select{
 	width: 100%;
 }
+ul, ol, li {
+  list-style: none;
+}
 
+h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd, figure {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  background-color: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"], input[type="search"], input[type="password"], input[type="email"] {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  border: 1px solid #d5d5d5;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #333;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #d5d5d5;
+}
+
+legend {
+  position: absolute;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+select {
+  height: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  padding-right: 8px;
+  border: 1px solid #cbcbcb;
+  line-height: 26px;
+}
 /*플레이스홀더*/
 .placeholder_wrap {
   position: relative;
@@ -299,8 +365,84 @@ input{
 }
 
 /*
- * 2-a. page - login
- */
+ * 2-a. header
+ ********************************************/
+.header_top_wrap{
+	padding: 0 4.1666%;
+	height: 40px;
+	background-color: #9e5cd8;
+}
+.header_top_wrap .logo{
+	float: left;
+	font-size: 0;
+}
+.header_top_wrap .logo a{
+	display: block;
+	padding: 13.5px 0;
+}
+.header_top_wrap .button_search{
+	float: right;
+	padding:9.5px 0 9.5px 9px;
+	width: 21.5px;
+	height: 21px;
+	background-position: -98px 9.5px;
+}
+.navigation_wrap{
+	box-sizing: border-box;
+	padding-top: 12.5px;
+	height: 75px;
+	background-color: #f5f5f5;
+}
+.navigation_wrap ul{
+	overflow: hidden;
+}
+.navigation_wrap li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.gnb_main a,
+.gnb_category a,
+.gnb_mypage a,
+.gnb_more a{
+	display: inline-block;
+	width: 50px;
+	height: 51px;
+	background: url(../img/gnb.png) no-repeat;
+	background-size: 215px 102px;
+	text-indent: -9999px;
+	-webkit-transition: .3s ease background-position;
+	-moz-transition: .3s ease background-position;
+	-ms-transition: .3s ease background-position;
+	-o-transition: .3s ease background-position;
+	transition: .3s ease background-position;
+}
+.gnb_main a{
+	background-position: 0 0;
+}
+.gnb_category a{
+	background-position: -55px 0;
+}
+.gnb_mypage a{
+	background-position: -110px 0;
+}
+.gnb_more a{
+	background-position: -165px 0;
+}
+.gnb_main a:focus, .gnb_main a:hover, .gnb_main.active a,
+.gnb_category a:focus, .gnb_category a:hover, .gnb_category.active a,
+.gnb_mypage a:focus, .gnb_mypage a:hover, .gnb_mypage.active a,
+.gnb_more a:focus, .gnb_more a:hover, .gnb_more.active a{
+	background-position-y: -51px;
+}
+
+/*
+ * 2-b. footer
+ *******************************************/
+
+/*
+ * 3. page - login
+ *****************************************/
 .login_bg{
 	background:#585858 url(../img/login_full_bg.jpg) no-repeat 50% top;
 	background-size: cover;
@@ -428,8 +570,8 @@ input{
 }
 
 /*
- * 2-a-1. password find
- */
+ * 3-2. page - password find
+ *****************************************/
 .content_password_find{
 	position: absolute;
 	right: -100%; /*canvas off*/
@@ -462,6 +604,41 @@ input{
 	text-indent: -9999px;
 }
 
+/*
+ * 4. page - main
+ ***************************************/
+/* main 사이트 카운팅 */
+.site_using_count{
+	overflow:hidden;
+	box-sizing: border-box;
+	padding-top: 10.5px;
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+}
+.site_using_count li{
+	float: left;
+	width: 33.3%;
+	color: #787878;
+	font-size: 10px;
+	font-family: "Dinmed";
+	text-align: center;
+	background: url(../img/main_vertical_dash_bar.png) no-repeat 0 0;
+	background-size: 1px 29.5px;
+}
+.site_using_count li:last-child{
+	width: 33.4%;
+}
+.site_using_count strong{
+	display: block;
+	color: #323232;
+	font-size: 19px;
+	line-height: 1;
+}
+
+/* main 슬라이더 */
+.slider_wrap{
+	
+}
 
 
 

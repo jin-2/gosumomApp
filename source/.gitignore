@@ -1,2 +1,4 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+#디렉토리 무시하기
+sprite/
+images/
+@temp/
