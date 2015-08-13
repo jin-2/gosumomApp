@@ -114,7 +114,7 @@ textarea {
 		1-a. button
 		1-b. checkbox, radio
 		1-c. canvas-off
-		1-d. layout
+		1-d. slider - bxSlider style custom
 	2. layout
 		2-a. header
 		2-b. footer
@@ -365,6 +365,51 @@ select {
 }
 
 /*
+ * 1-d. slider - bxSlider style custom
+ *********************************************/
+/* PAGER */
+.bx-wrapper{
+	position: relative;
+}
+.bx-wrapper .bx-controls{
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+.bx-wrapper .bx-pager {
+	
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #e6e6e6;
+	text-indent: -9999px;
+	display: block;
+	width: 9px;
+	height: 9px;
+	margin: 4.5px;
+	outline: 0;
+	border-radius: 50%;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #9e5cd8;
+}
+
+/*
+ * 2. layout
  * 2-a. header
  ********************************************/
 .header_top_wrap{
@@ -631,13 +676,31 @@ select {
 .site_using_count strong{
 	display: block;
 	color: #323232;
-	font-size: 19px;
+	font-size: 1.583em;
 	line-height: 1;
 }
 
-/* main 슬라이더 */
-.slider_wrap{
-	
+/*메인 - 구해요*/
+.main_find_wrap{
+	position: relative;
+	padding: 0 4.1666%;
+	background-color: #f5f5f5;
+}
+.main_find_wrap .title{
+	padding: 14px 0 9px;
+	color: #323232;
+	font-size: 1.333em;
+}
+.main_find_wrap .find_list li{
+	border-top: 1px solid #fff;
+}
+.button_more{
+	display: inline-block;
+	padding: 10px;
+	width: 18px;
+	height: 10px;
+	background-position: -75px -25px;
+	border: 1px solid red;
 }
 
 

@@ -54,16 +54,16 @@
 		<div class="slider_wrap">
 			<ul id="slider">
 				<li><a href="#"><img src="../img/banner_new_member.jpg" alt="신규 회원가입 시 5000원 쿠폰 즉시 발급!" /></a></li>
-				<li><img src="http://lorempixel.com/500/350/people/2/" alt="" /></li>
-				<li><img src="http://lorempixel.com/500/350/people/3/" alt="" /></li>
+				<li><img src="http://dummyimage.com/720x300/50125e/ffffff.jpg" alt="" /></li>
+				<li><img src="http://dummyimage.com/720x300/763b82/ffffff.jpg" alt="" /></li>
 			</ul>
 		</div>
 		<!-- // 슬라이더 -->
 
 		<!-- 구해요 -->
-		<section class="find_wrap">
+		<section class="main_find_wrap">
 			<h2 class="title">구해요</h2>
-			<button type="button">펼쳐보기</button>
+			<button type="button" class="button_more common_bg">펼쳐보기</button>
 			<ul class="find_list">
 				<li>
 					<a href="" class="find_list_title">
@@ -185,11 +185,15 @@
 	</footer>
 </div>
 
-<script src="../js/plugin/bxslider.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
 <script src="../js/main.js"></script>
 <script>
 	$(document).ready(function(){
-		$('#slider').bxslider();
+		// 메인 상단 배너
+		$('#slider').bxSlider({
+			auto: true,
+			 controls: false
+		});
 	});
 </script>
 
