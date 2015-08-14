@@ -32,7 +32,7 @@
 		</nav>
 	</header>
 
-	<main>
+	<main class="contents">
 		<!-- 사이트 카운팅 -->
 		<ul class="site_using_count">
 			<li>
@@ -63,7 +63,6 @@
 		<!-- 구해요 -->
 		<section class="main_find_wrap">
 			<h2 class="title">구해요</h2>
-			<button type="button" class="button_more common_bg">펼쳐보기</button>
 			<ul class="find_list">
 				<li>
 					<a href="" class="find_list_title">
@@ -84,33 +83,38 @@
 					<span class="find_list_time">5시간</span>
 				</li>
 			</ul>
-			<time>2015. 08 .05 (수)  <span>04:58 PM</span></time>
+			<button type="button" class="button_more common_bg">펼쳐보기</button>
+			<time class="current_time">2015. 08 .05 (수)  <span>04:58 PM</span></time>
 		</section>
 		<!-- //구해요 -->
 
 		<!-- 이달의 베스트 -->
 		<section class="main_store_list best">
-			<h2>이달의 베스트</h2>
+			<h2 class="title">이달의 베스트</h2>
 			<ul>
 				<li class="store_item">
 					<div class="image_view">
-						<a href="#">
-							<strong class="label best"></strong>
-							<img src="../img/@thumb_main1.jpg" alt="">
-						</a>
-						<a href="#" class="button_like">
-							<span class="icon_like"></span>
-							좋아요
-							<span class="count"></span>
-						</a>
-						<a href="#" class="button_review">
-							<span class="icon_pencil"></span>
-							리뷰
-							<span class="count"></span>
-						</a>
+						<strong class="badge best">BEST</strong>
+						<ul class="store_item_slider">
+							<li class="slide"><a href="#"><img src="../img/@thumb_main1.jpg" alt="" /></a></li>
+							<li class="slide"><a href="#"><img src="http://dummyimage.com/720x420/50125e/ffffff.jpg" alt="" /></a></li>
+							<li class="slide"><a href="#"><img src="http://dummyimage.com/720x420/763b82/ffffff.jpg" alt="" /></a></li>
+						</ul>
+						<div class="btns">
+							<a href="#" class="button_round button_like">
+								<span class="icon_like"></span>
+								좋아요
+								<span class="count"></span>
+							</a>
+							<a href="#" class="button_round button_review">
+								<span class="icon_pencil"></span>
+								리뷰
+								<span class="count"></span>
+							</a>
+						</div>
 					</div>
 					<div class="text_view">
-						<span class="profile_image"><img src="" alt=""></span>
+						<span class="profile_image"><img src="http://lorempixel.com/110/110/people" alt=""></span>
 						<div class="rating_star_wrap small_x">
 							<span class="rating_star">
 								<span class="inner" style="width:71%"></span>
@@ -121,13 +125,13 @@
 							<strong>진남이네 가게</strong>
 							애완견의 모든것
 						</p>
-						<div class="hash_category_wrap">
-							<a href="#">#애완견</a>
-							<a href="#">#반려동물</a>
-							<a href="#">#반려동물</a>
-							<a href="#">#반려동물</a>
-							<a href="#">#반려동물</a>
-						</div>
+					</div>
+					<div class="hash_category_wrap">
+						<a href="#">#애완견</a>
+						<a href="#">#반려동물</a>
+						<a href="#">#반려동물</a>
+						<a href="#">#반려동물</a>
+						<a href="#">#반려동물</a>
 					</div>
 				</li>
 			</ul>
@@ -193,6 +197,11 @@
 		$('#slider').bxSlider({
 			auto: true,
 			 controls: false
+		});
+
+		$('.store_item_slider').bxSlider({
+			controls: false,
+			pager: false
 		});
 	});
 </script>

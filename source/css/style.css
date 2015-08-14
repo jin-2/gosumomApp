@@ -1,3 +1,6 @@
+/* font-family: 'PT Sans', sans-serif; */
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
 /*Normalize*/
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
@@ -110,11 +113,16 @@ textarea {
 
 /* ==========================================================================
 	Author's custom styles
+	table of contents
+
 	1. common
 		1-a. button
 		1-b. checkbox, radio
 		1-c. canvas-off
 		1-d. slider - bxSlider style custom
+		1-e. label, badge
+		1-f. store item view - wide
+		1-g. star
 	2. layout
 		2-a. header
 		2-b. footer
@@ -409,6 +417,71 @@ select {
 }
 
 /*
+ * 1-e. label, badge
+ *******************************************/
+.badge{
+	display: block;
+	width: 60px;
+	height: 30px;
+	background-color: #9e5cd8;
+	color: #fff;
+	font-family: 'PT Sans';
+	font-weight: 400;
+	font-size: 1.333em;
+	text-align: center;
+	line-height: 30px;
+	text-transform: uppercase;
+	box-shadow: 0 1px 0 rgba(24, 24, 24, 0.2);
+}
+a:hover .badge{
+	text-decoration: none;
+}
+
+/*1-f. store item view - wide*/
+.store_item{
+	margin: 0 auto;
+	max-width: 720px;
+}
+.store_item .image_view{
+	z-index: 1;
+	position: relative;
+}
+.store_item .image_view .badge{
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 4.1666%;
+}
+.store_item .image_view .btns{
+	position: absolute;
+	bottom: 10px;
+	left: 4.1666%;
+}
+.store_item .button_round{
+
+}
+.store_item .profile_image{
+	float: left;
+	margin-right: 5px;
+}
+.store_item .profile_image img{
+	display: block;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+}
+.store_item .text_view{
+	padding: 10px 4.1666%;
+}
+.store_item .store_explain{
+	color: #787878;
+}
+.store_item .store_explain strong{
+	display: block;
+	font-size: 16px;
+	color: #323232;
+}
+/*
  * 2. layout
  * 2-a. header
  ********************************************/
@@ -680,6 +753,10 @@ select {
 	line-height: 1;
 }
 
+.slider_wrap li{
+	text-align: center;
+}
+
 /*메인 - 구해요*/
 .main_find_wrap{
 	position: relative;
@@ -691,20 +768,58 @@ select {
 	color: #323232;
 	font-size: 1.333em;
 }
+.main_find_wrap .button_more{
+	position: absolute;
+	top:11px;
+	right: 4.16666%;
+	margin-right: -10px;
+}
 .main_find_wrap .find_list li{
+	overflow: hidden;
 	border-top: 1px solid #fff;
 }
-.button_more{
-	display: inline-block;
-	padding: 10px;
-	width: 18px;
-	height: 10px;
-	background-position: -75px -25px;
-	border: 1px solid red;
+.main_find_wrap .find_list_title,
+.main_find_wrap .find_list_time{
+	display: block;
+	float: left;
+	padding: 5.5px 0 6.5px;
+}
+.main_find_wrap .find_list_title{
+	width: 80%;
+	color: #505050;
+}
+.main_find_wrap .find_list_time{
+	width: 20%;
+	text-align: right;
+	color: #b4b4b4;
+}
+.current_time{
+	display: block;
+	padding: 7px 0 8px;
+	border-top: 1px solid #fff;
+	color: #c8c8c8;
+	font-size: 0.667em;
 }
 
+/*더보기 버튼*/
+.button_more{
+	display: inline-block;
+	width: 38px;
+	height: 30px;
+	background-position: -70px -20px;
+}
 
-
+/*이달의 베스트*/
+.main_store_list .title{
+	height: 40px;
+	font-size: 16px;
+	text-align: center;
+	color: #323232;
+	line-height: 40px;
+}
+.store_item_slider li{
+	text-align: center;
+}
 
 
 
