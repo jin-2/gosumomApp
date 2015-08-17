@@ -428,11 +428,17 @@ a:hover .badge{
 }
 .store_item .store_explain{
 	color: #787878;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .store_item .store_explain strong{
 	display: block;
 	font-size: 16px;
 	color: #323232;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .icon_like{
 	margin-top: 6px;
@@ -461,7 +467,7 @@ a:hover .badge{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.store_item .hash_category_wrap a{
+.store_item .hash_category_wrap span{
 	margin: 0 5px;
 	background-color: #f5f5f5;
 	color: #323232;
@@ -597,6 +603,97 @@ a:hover .badge{
 /*
  * 2-b. footer
  *******************************************/
+.customer_using{
+	overflow: hidden;
+	padding: 14.5px 0;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+}
+.customer_using li{
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	background: url(../img/main_vertical_dash_bar.png) repeat-y 0 0;
+	background-size: 1px 29.5px;
+}
+.customer_using li:first-child{
+	background: none;
+}
+.customer_using a{
+	font-size: 0.833em;
+	color: #787878;
+	text-decoration: none;
+}
+.customer_using span[class*="icon"]{
+	margin-bottom: 5px;
+}
+.icon_customer_center,
+.icon_using,
+.icon_tip{
+	display: block;
+	margin: 0 auto;
+	width: 29.5px;
+	height: 29.5px;
+}
+.icon_customer_center{
+	background-position: -220.5px -25px;
+}
+.icon_using{
+	background-position: -185.5px -25px
+}
+.icon_tip{
+	background-position: -150.5px -25px
+}
+
+.policy_menu{
+	border-top: 1px solid #d4d4d4;
+	text-align: center;
+}
+.policy_menu li{
+	display: inline;
+}
+.policy_menu a{
+	display: inline-block;
+	padding-right: 8px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 11px;
+	color: #787878;
+}
+.policy_menu a::before{
+	content: "";
+	display: inline-block;
+	padding-left: 12px;
+	height: 10px;
+	border-left: 1px solid #999;
+	vertical-align: middle;
+}
+.policy_menu li:first-child a::before{
+	padding-left: 0;
+	border-left: 0;
+}
+.policy_menu li:last-child a{
+	padding-right: 0;
+}
+
+.site_info{
+	padding: 12px 0 21px;
+	border-top: 1px solid #dcdcdc;
+}
+.site_info,
+.site_info strong,
+.site_info a,
+.site_info address{
+	margin: 0 2.5px;
+	font-size: 0.75em;
+	color: #787878;
+	text-align: center;
+	font-weight: normal;
+}
+.site_info address{
+	display: inline;
+	font-style: normal;
+}
 
 /*
  * 3. page - login
@@ -863,5 +960,68 @@ a:hover .badge{
 	text-align: center;
 }
 
-
+/*빠른 이동 링크*/
+.quick_link_wrap{
+	overflow: hidden;
+	padding: 14.5px 4.1666%;
+	text-align: center;
+}
+.quick_link_wrap > a{
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 16.5px 5px;
+	width:80px;
+	height: 80px;
+	box-shadow: 0 1px 0 rgba(24, 24, 24, 0.15);
+	border-radius: 50%;
+	color: #fff;
+	background-color: #aa77ef;
+	font-size: 11px;
+	text-align: center;
+	letter-spacing: -1px;
+	line-height: 1.2;
+}
+@media all and (max-width:375px){
+	.quick_link_wrap > a{
+		width: 70px;
+		height: 70px;
+		padding-top: ;
+		padding-left: 2px;
+		padding-right: 2px;
+		padding-top: 10.5px;
+	}
+}
+.quick_link_wrap .button_best_tag{
+	background-color: #eab05e;
+}
+.quick_link_wrap .button_month_event{
+	background-color: #39c4b2;
+}
+.quick_link_wrap .button_category_event{
+	background-color: #6869d7;
+}
+.quick_link_wrap > a > span{
+	display: block;
+	margin: 0 auto 5px;
+}
+.icon_hashtag{
+	width: 12px;
+	height: 14.5px;
+	background-position: -175px 0;
+}
+.icon_calendar{
+	width: 15px;
+	height: 16px;
+	background-position: -190px 0;
+}
+.icon_category{
+	width: 16px;
+	height: 15px;
+	background-position: -210px 0;
+}
+.icon_diamond{
+	width: 21.5px;
+	height: 18px;
+	background-position: -228.5px 0;
+}
 
