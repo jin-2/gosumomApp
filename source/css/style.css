@@ -1,9 +1,37 @@
+/* ==========================================================================
+	Author's custom styles
+	table of contents
+	
+	0. font import
+	0. Normalize.css
+	0. reset css
+	0. Helper classes
+	1. common
+		1-a. button
+		1-b. checkbox, radio
+		1-c. canvas-off
+		1-d. slider - bxSlider style custom
+		1-e. label, badge
+		1-f. store item view - wide
+		1-g. star
+		1-h. placeholder
+	2. layout
+		2-a. header
+		2-b. footer
+	3. page - login
+		3-2. page - password find
+	4. page - main
+   ========================================================================== */
+
 /* font-family: 'PT Sans', sans-serif; */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 
 /*Normalize*/
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
+/* ==========================================================================
+   0. reset
+   =================== =====================================================*/
 html {
 	color: #222;
 	font-size: 1em;
@@ -22,19 +50,9 @@ body{
 	text-shadow: none;
 }
 hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0;
+	display: none;
 }
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
 	vertical-align: top;
 }
 input{
@@ -48,14 +66,73 @@ fieldset {
 textarea {
 	resize: vertical;
 }
-
+img{
+	max-width:100%;
+}
+section{margin:0;}
+div, input, select{
+	box-sizing: border-box;
+}
+input, select{
+	width: 100%;
+}
+ul, ol, li {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd, figure {
+  margin: 0;
+  padding: 0;
+}
+button {
+  overflow: visible;
+  border: 0;
+  background-color: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+input[type="text"], input[type="search"], input[type="password"], input[type="email"] {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  border: 1px solid #d5d5d5;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+/*input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #333;
+}*/
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #d5d5d5;
+}
+legend {
+  position: absolute;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+select {
+  height: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  padding-right: 8px;
+  border: 1px solid #cbcbcb;
+  line-height: 26px;
+}
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers:
- */
+   0. Helper classes
+   ========================================================================*/
 .hidden {
 	display: none !important;
 }
@@ -86,59 +163,8 @@ textarea {
 	content: " "; /* 1 */
 	display: table; /* 2 */
 }
-
 .clearfix:after {
 	clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-.browserupgrade {
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em 0;
-}
-
-/* ==========================================================================
-	Author's custom styles
-	table of contents
-
-	1. common
-		1-a. button
-		1-b. checkbox, radio
-		1-c. canvas-off
-		1-d. slider - bxSlider style custom
-		1-e. label, badge
-		1-f. store item view - wide
-		1-g. star
-	2. layout
-		2-a. header
-		2-b. footer
-	3. page - login
-		3-2. page - password find
-	4. page - main
-   ========================================================================== */
-/*
- * 1. common
- **************************************/
-img{
-	max-width:100%;
-}
-section{margin:0;}
-div, input, select{
-	box-sizing: border-box;
 }
 .common_bg{
 	display: inline-block;
@@ -147,88 +173,10 @@ div, input, select{
 	background-size: 250px;
 	text-indent: -9999px;
 }
-input, select{
-	width: 100%;
-}
-ul, ol, li {
-  list-style: none;
-}
 
-h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd, figure {
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  overflow: visible;
-  border: 0;
-  background-color: none;
-}
-
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-input[type="text"], input[type="search"], input[type="password"], input[type="email"] {
-  box-sizing: border-box;
-  height: 40px;
-  padding: 0 10px;
-  line-height: 40px;
-  border: 1px solid #d5d5d5;
-  font-size: 14px;
-  font-size: 1.4rem;
-}
-
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 50px white inset;
-  -webkit-text-fill-color: #333;
-}
-
-textarea {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 15px;
-  border: 1px solid #d5d5d5;
-}
-
-legend {
-  position: absolute;
-  top: -9999px;
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-}
-
-select {
-  height: 40px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 17px;
-  padding-right: 8px;
-  border: 1px solid #cbcbcb;
-  line-height: 26px;
-}
-/*플레이스홀더*/
-.placeholder_wrap {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-}
-.placeholder_wrap .placeholder {
-  z-index: 1;
-  position: absolute;
-  top: 11px;
-  left: 12px;
-}
-.placeholder_wrap input {
-  position: relative;
-  z-index: 2;
-  background-color: transparent;
-}
+/*
+ * 1. common
+ **************************************/
 
 /*
  * 1-a. button
@@ -245,8 +193,10 @@ select {
 	line-height: 50px;
 }
 .button_round{
+	box-sizing: border-box;
 	display: inline-block;
-	padding: 8px 22.5px;
+	padding: 0 13px;
+	height: 30px;
 	border: 1px solid #fff;
 	border-radius: 17px;
 	background-color: transparent;
@@ -254,6 +204,7 @@ select {
 	text-align: center;
 	font-weight: 600;
 	text-decoration: none;
+	line-height: 28px;
 }
 
 /*
@@ -436,6 +387,9 @@ select {
 a:hover .badge{
 	text-decoration: none;
 }
+.badge.event{
+	background-color: #f74972;
+}
 
 /*
  * 1-f. store item view - wide
@@ -459,9 +413,6 @@ a:hover .badge{
 	bottom: 10px;
 	left: 4.1666%;
 }
-.store_item .button_round{
-
-}
 .store_item .profile_image{
 	float: left;
 	margin-right: 5px;
@@ -483,6 +434,93 @@ a:hover .badge{
 	font-size: 16px;
 	color: #323232;
 }
+.icon_like{
+	margin-top: 6px;
+	width: 14.5px;
+	height: 14.5px;
+	background-position: -135px 0;
+	vertical-align: top;
+}
+.icon_pencil{
+	margin-top: 6px;
+	width: 14.5px;
+	height: 14.5px;
+	background-position: -155px 0;
+	vertical-align: top;
+}
+.store_item .button_round:hover,
+.store_item .button_round:focus{
+	background-color: #9e5cd8;
+	border-color: #9e5cd8;
+	text-decoration: none;
+}
+.store_item .hash_category_wrap{
+	overflow: hidden;
+	padding: 5.5px 4.1666%;
+	border-top: 1px solid #ddd;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.store_item .hash_category_wrap a{
+	margin: 0 5px;
+	background-color: #f5f5f5;
+	color: #323232;
+	font-size: 13px;
+	font-weight: 600;
+}
+.button_more_list{
+	display: block;
+	width: 100%;
+	height: 28px;
+	border: 1px solid #ddd;
+	border-width: 1px 0;
+}
+.button_more_list span{
+	display: inline-block;
+	margin-top: 4px;
+	width: 18px;
+	height: 10px;
+	background-position: -80px -30px;
+	text-indent: -9999px;
+	vertical-align: top;
+}
+/*
+ * 1-g. star
+ */
+.rating_star_wrap{}
+.rating_star{
+	display: inline-block;
+	width: 57.5px;
+	height: 11px;
+	background: url(../img/star.png) no-repeat 0 -11px;
+	background-size: 100px 150px;
+}
+.rating_star .inner{
+	display: block;
+	height: 100%;
+	background: url(../img/star.png) no-repeat 0 0;
+	background-size: 100px 150px;
+}
+/*
+ * 1-h. placeholder
+ */
+.placeholder_wrap {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.placeholder_wrap .placeholder {
+  z-index: 1;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+}
+.placeholder_wrap input {
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
 /*
  * 2. layout
  * 2-a. header
@@ -571,8 +609,6 @@ a:hover .badge{
 	position: relative;
 	box-sizing: border-box;
 	margin: 0 auto;
-	
-	
 	padding: 47.5px 11.1111% 6.3363%;
 }
 .content_login .title{
@@ -688,7 +724,11 @@ a:hover .badge{
 	background-position: -40px 0;
 	text-indent: -9999px;
 }
-
+.content_login .button_round{
+	height: 35px;
+	line-height: 35px;
+	padding: 0 22.5px;
+}
 /*
  * 3-2. page - password find
  *****************************************/
