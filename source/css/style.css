@@ -100,8 +100,6 @@ input[type="text"], input[type="search"], input[type="password"], input[type="em
 	padding: 0 10px;
 	line-height: 40px;
 	border: 1px solid #d5d5d5;
-	font-size: 14px;
-	font-size: 1.4rem;
 }
 /*input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 50px white inset;

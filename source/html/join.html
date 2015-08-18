@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Gosumom</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content=""><!-- humans.txt 처리 권장 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+</head>
+<body>
+
+<div class="page">
+	<header class="header">
+		<div class="header_top_wrap">
+			<h1 class="logo"><a href="main.html"><img src="../img/gosumom.png" alt="gosumom" width="73" height="13"></a></h1>
+			<a href="search.html" class="button_search common_bg">검색하기</a>
+		</div>
+		<nav class="navigation_wrap">
+			<ul>
+				<!-- [D]: 클래스네임 active toggle -->
+				<li class="gnb_main active"><a href="#">메인</a></li>
+				<li class="gnb_category"><a href="#">카테고리</a></li>
+				<li class="gnb_mypage"><a href="#">마이페이지</a></li>
+				<li class="gnb_more"><a href="#">더보기</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="contents">
+		<p><img src="../img/join_step1.png" alt="이메일 가입 절차 첫번째 이메일 가입란입니다. 다음은 두번째 본인확인, 세번째 맘정보설정 페이지가 있습니다."></p>
+		<form action="#">
+			<fieldset>
+				<legend>이메일 가입 정보 작성</legend>
+				<div class="placeholder_wrap">
+					<label for="join_info_name"><span class="placeholder">닉네임을 입력해주세요.</span></label>
+					<input type="text" name="" id="join_info_name" placeholder="" value="">
+				</div>
+				<div class="placeholder_wrap">
+					<label for="join_info_mail"><span class="placeholder">이메일 주소를 입력해주세요.</span></label>
+					<input type="email" name="" id="join_info_mail" placeholder="" value="">
+				</div>
+				<div class="placeholder_wrap">
+					<label for="join_info_pass"><span class="placeholder">비밀번호 영문,숫자 포함 6~20자.</span></label>
+					<input type="password" name="" id="join_info_pass" placeholder="" value="">
+				</div>
+				<div class="placeholder_wrap">
+					<label for="join_info_pass_re"><span class="placeholder">비밀번호 재 확인.</span></label>
+					<input type="password" name="" id="join_info_pass_re" placeholder="" value="">
+				</div>
+				<p>
+					<span class="dcheck_type2">
+						<input type="checkbox" id="check" name="" value="" >
+						<label for="check"><em></em><a href="#">서비스이용약관</a> 및 <a href="#">개인정보 취급방침</a>, <a href="#">위치기반서비스 취급방침</a>에 동의합니다.</label>
+					</span>
+				</p>
+				<p class="note">* 비밀번호 분실시 이메일을 통해 확인하므로, 정확하게 입력해주세요.</p>
+
+				<button type="submit" class="button_flat">확인</button>
+			</fieldset>
+		</form>
+	</main>
+
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+	$(document).ready(function(){
+		
+	});
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
+</body>
+</html>
