@@ -601,34 +601,36 @@ a:hover .badge{
 .gnb_mypage a,
 .gnb_more a{
 	display: inline-block;
-	width: 50px;
-	height: 51px;
+	width: 45px;
+	height: 45px;
 	background: url(../img/gnb.png) no-repeat;
-	background-size: 215px 102px;
+	background-size: 200px 45px;
 	text-indent: -9999px;
-	-webkit-transition: .3s ease background-position;
-	-moz-transition: .3s ease background-position;
-	-ms-transition: .3s ease background-position;
-	-o-transition: .3s ease background-position;
-	transition: .3s ease background-position;
+	transform: rotate(0);
+	-webkit-transition: .3s ease transform;
+	-moz-transition: .3s ease transform;
+	-ms-transition: .3s ease transform;
+	-o-transition: .3s ease transform;
+	transition: .3s ease transform;
 }
 .gnb_main a{
 	background-position: 0 0;
 }
 .gnb_category a{
-	background-position: -55px 0;
+	background-position: -50px 0;
 }
 .gnb_mypage a{
-	background-position: -110px 0;
+	background-position: -100px 0;
 }
 .gnb_more a{
-	background-position: -165px 0;
+	background-position: -150px 0;
 }
 .gnb_main a:focus, .gnb_main a:hover, .gnb_main.active a,
 .gnb_category a:focus, .gnb_category a:hover, .gnb_category.active a,
 .gnb_mypage a:focus, .gnb_mypage a:hover, .gnb_mypage.active a,
 .gnb_more a:focus, .gnb_more a:hover, .gnb_more.active a{
-	background-position-y: -51px;
+	transform: rotate(360deg);
+	
 }
 
 /*
