@@ -28,18 +28,12 @@
 	<div id="_contents">
 		<ul id="_snb">
 			<li><a href="#_icon">Icon</a></li>
-			<li><a href="#_slider">Slider</a></li>
-			<li><a href="#_lozenges">Lozenges</a></li>
 			<li><a href="#_star">Star</a></li>
-			<li><a href="#_color">Color</a></li>
-			<li><a href="#_title">Title</a></li>
 			<li><a href="#_button">Button</a></li>
 			<li><a href="#_placeholder">Placeholder</a></li>
-			<li><a href="#_selectbox">selectbox</a></li>
-			<li><a href="#_tab">Tab</a></li>
-			<li><a href="#_box">Box</a></li>
+			<li><a href="#_label">Label</a></li>
+			<li><a href="#_item">Item</a></li>
 			<li><a href="#_form">Form</a></li>
-			<li><a href="#_board">Board</a></li>
 		</ul>
 		<div class="clear"></div>
 		<!-- contents -->
@@ -51,112 +45,79 @@
 					<span class="icon_lock common_bg"></span> &nbsp;
 					<a href="#" class="show_side_content button_back common_bg">로그인 페이지 이동</a> &nbsp;
 				</div>
+				<br>
+				<p>* background:url(../img/common.png) no-repeat 0 0;background-size:250px 250px;</p>
+				<div style="background-color: #000;">
+					<img src="../img/common.png" alt="">
+				</div>
 				<hr>
 				<!-- // Icon -->
 
-				<h4 id="_slider">Slider</h4>
-
-				<div class="slider_wrap">
-					<div class="big">
-						<ul id="slider">
-							<!-- 첫번째 이미지는 기본 이미지 img_default_gallery -->
-							<li><img src="/momHTML2/public/img/img_default_gallery.jpg" alt="어린이집 사진을 업로드 해주세요!" /></li>
-							<li><img src="http://lorempixel.com/500/350/people/2/" alt="" /></li>
-							<li><img src="http://lorempixel.com/500/350/people/3/" alt="" /></li>
-							<li><img src="http://lorempixel.com/500/350/people/4/" alt="" /></li>
-							<li><img src="http://lorempixel.com/500/350/people/5/" alt="" /></li>
-						</ul>
-					</div>
-					<div id="slider_pager" class="thumb">
-						<a data-slide-index="0" href="#" class="active">
-							<img src="/momHTML2/public/img/img_default_gallery.jpg" alt="" />
-							<span class="overlay"></span>
-						</a>
-						<a data-slide-index="1" href="#">
-							<img src="http://lorempixel.com/100/70/people/2/" alt="" />
-							<span class="overlay"></span>
-						</a>
-						<a data-slide-index="2" href="#">
-							<img src="http://lorempixel.com/100/70/people/3/" alt="" />
-							<span class="overlay"></span>
-						</a>
-						<a data-slide-index="3" href="#">
-							<img src="http://lorempixel.com/100/70/people/4/" alt="" />
-							<span class="overlay"></span>
-						</a>
-						<a data-slide-index="4" href="#">
-							<img src="http://lorempixel.com/100/70/people/5/" alt="" />
-							<span class="overlay"></span>
-						</a>
-					</div>
-				</div><!-- slider_wrap -->
-
-				<hr>
-				<!-- // Slider -->
-
-				<h4 id="_lozenges">Lozenges</h4>
-
-				<span class="pill">리뷰 종합 평점 </span>
-				<hr>
-				
-				<span class="like_count"><span class="icon_heart"></span> <span class="emerald">9,999명</span>이 찜하였습니다.</span>
-				<hr>
-
-				<span class="give_state done"><span class="icon"></span>승인</span>
-				<span class="give_state ing"><span class="icon"></span>심사중</span>
-				<span class="give_state reject"><span class="icon"></span>거절</span>
-				<hr>
-
-				<!-- // Lozenges -->
-
 				<!-- Star -->
 				<h4 id="_star">Star</h4>
-					<div class="rating_star_wrap small_x">
+					<div class="rating_star_wrap">
 						<span class="rating_star">
-							<span class="inner" style="width:71%"></span>
+							<span class="inner" style="width:20%"></span>
+						</span>
+						<strong class="hidden">1<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:30%"></span>
+						</span>
+						<strong class="hidden">1.5<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:40%"></span>
+						</span>
+						<strong class="hidden">2<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:50%"></span>
+						</span>
+						<strong class="hidden">2.5<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:60%"></span>
+						</span>
+						<strong class="hidden">3<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:70%"></span>
 						</span>
 						<strong class="hidden">3.5<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:80%"></span>
+						</span>
+						<strong class="hidden">4<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:90%"></span>
+						</span>
+						<strong class="hidden">4.5<span>5점 만점 중</span></strong>
+					</div>
+					<div class="rating_star_wrap">
+						<span class="rating_star">
+							<span class="inner" style="width:100%"></span>
+						</span>
+						<strong class="hidden">5<span>5점 만점 중</span></strong>
 					</div>
 
 					<div class="rating_star_wrap">
 						<span class="rating_star">
-							<span class="inner" style="width:71%"></span>
+							<span class="inner" style="width:70%"></span>
 						</span>
 						<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
 					</div>
-
-					<div class="rating_star_wrap small_fat">
-						<span class="rating_star">
-							<span class="inner" style="width:71%"></span>
-						</span>
-						<strong class="score red">3.5점<span class="hidden">5점 만점 중</span></strong>
-					</div>
-
-					<div class="rating_star_wrap medium">
-						<span class="rating_star">
-							<span class="inner" style="width:71%"></span>
-						</span>
-						<strong class="score">3.5점<span class="hidden">5점 만점 중</span></strong>
-					</div>
-
-					<div class="rating_star_wrap medium">
-						<span class="rating_star">
-							<span class="inner" style="width:71%"></span>
-						</span>
-						<strong class="score red">3.5점<span class="hidden">5점 만점 중</span></strong>
-					</div>
-
-
 				<hr>
 				<!-- //Star -->
-
-				<!-- Color -->
-				<h4 id="_color">Color</h4>
-
-				<span class="emerald">.emerald / $emerald</span>
-				<hr>
-				<span class="scarlet">.scarlet / $scarlet</span>
-				<!-- //Color -->
 
 				<!-- button -->
 				<h4 id="_button">button</h4>
@@ -178,60 +139,70 @@
 				</div>
 				<hr>
 				<!-- //Placeholder -->
-				
 
-				<!-- tab -->
-				<h4 id="_tab">Tab</h4>
-
-				<div>
-					<ul class="sub_tab">
-						<li><a href="#" class="active">어린이집 리뷰</a></li>
-						<li><a href="#">상담후기</a></li>
-						<li><a href="#">어린이집 사진</a></li>
-						<li><a href="#">지도보기</a></li>
-					</ul>
-				</div>
-				<style>
-					.sub_tab{width: 800px;}
-					.sub_tab li{width: 25%;}
-				</style>
-				<hr>
-
-				<!-- //tab -->
+				<!-- label -->
+				<h4 id="_label">Label</h4>
+				<strong class="badge best">BEST</strong>
+				<strong class="badge event">Event</strong>
+				<!-- // label -->
 
 				<!-- box -->
-				<h4 id="_box">Box</h4>
-				
-				<div class="box_text">
-					<div class="nano_scroll">
-						<div class="nano-content">
-							우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+				<h4 id="_item">item</h4>
+				<ul>
+					<!-- roof -->
+					<li class="store_item">
+						<div class="image_view">
+							<strong class="badge best">BEST</strong>
+							<a href="#">
+								<ul class="store_item_slider">
+									<li class="slide"><img src="../img/@thumb_main1.jpg" alt="" /></li>
+									<li class="slide"><img src="http://dummyimage.com/720x420/50125e/ffffff.jpg" alt="" /></li>
+									<li class="slide"><img src="http://dummyimage.com/720x420/763b82/ffffff.jpg" alt="" /></li>
+								</ul>
+							</a>
+							<div class="btns">
+								<a href="#" class="button_round button_like">
+									<span class="icon_like common_bg"></span>
+									좋아요
+									<span class="count">355</span>
+								</a>
+								<a href="#" class="button_round button_review">
+									<span class="icon_pencil common_bg"></span>
+									리뷰
+									<span class="count">255</span>
+								</a>
+							</div>
 						</div>
-					</div>
-				</div>
+						<a href="#">
+							<div class="text_view">
+								<span class="profile_image"><img src="http://lorempixel.com/110/110/people" alt=""></span>
+								<div class="rating_star_wrap">
+									<span class="rating_star">
+										<span class="inner" style="width:70%"></span>
+									</span>
+									<strong class="hidden">3.5<span>5점 만점 중</span></strong>
+								</div>
+								<p class="store_explain">
+									<strong>진남이네 가게</strong>
+									애완견의 모든것
+								</p>
+							</div>
+							<div class="hash_category_wrap">
+								<span>#애완견</span>
+								<span>#반려동물</span>
+								<span>#반려동물</span>
+								<span>#반려동물</span>
+								<span>#반려동물</span>
+							</div>
+						</a>
+					</li>
+					<!-- // roof -->
+				</ul>
 				<hr>
-
-				<!-- 팝업 -->
-				<div id="popup_profile_photo" class="popup_wrap">
-					<div class="inner">
-						<button type="button" class="popup_close close">닫기</button>
-						<h4 class="title">프로필사진 변경</h4>
-						<p class="title_desc">사진을 선택해주세요.</p>
-						내용
-						<div class="btn_wrap">
-							<button type="button" class="button fix117">취소</button>
-							<button type="submit" class="button fix117 scarlet">변경</button>
-						</div>
-					</div>
-				</div>
-				<!-- // 팝업 -->
-				<hr>
-
-				<!-- //box -->
+				<!-- //item -->
 
 				<!-- form -->
 				<h4 id="_form">Form</h4>
-
 				<div class="file_input_wrap">
 					<input type="text" id="" class="src" readonly="readonly" placeholder="사진등록" title="사진등록">
 					<div class="button_file_input">
@@ -249,8 +220,24 @@
 						<label for="id_save"><em></em>아이디 저장하기</label>
 					</span>
 				</div>
+
+				<span class="dcheck_type2">
+					<input type="checkbox" id="check" name="" value="" >
+					<label for="check"><em></em>fill checkbox</label>
+				</span>
+
+				<span class="dcheck_type2 soft">
+					<input type="checkbox" id="check" name="" value="" >
+					<label for="check"><em></em>soft checkbox</label>
+				</span>
+
+				<span class="dcheck_type2 line">
+					<input type="checkbox" id="check" name="" value="" >
+					<label for="check"><em></em>line checkbox</label>
+				</span>
 				<!-- //design_checkbox -->
 				<hr>
+
 				<!-- design_radio -->
 				<div class="set_radio">
 					<span class="dradio">
@@ -263,145 +250,8 @@
 						<label for="rad2"><span></span>선택2</label>
 					</span>
 
-					<span class="dradio other checked">
-						<input type="radio" name="rad" id="rad3" /> 
-						<label for="rad3"><span></span>선택2</label>
-					</span>
-
-					<span class="dradio other2 checked">
-						<input type="radio" name="rad" id="rad3" /> 
-						<label for="rad3"><span></span>선택2</label>
-					</span>
-					<span class="dradio other2">
-						<input type="radio" name="rad" id="rad3" /> 
-						<label for="rad3"><span></span>선택2</label>
-					</span>
 				</div>
 				<!-- //design_radio -->
-
-				<!-- //form -->
-
-				<!-- box -->
-				<h4 id="_selectbox">selectbox</h4>
-
-					<div class="select_custom">
-						<strong class="hidden">시/도 선택</strong>
-						<a href="#" class="select_insert active">
-							<strong>전체</strong>
-							<span class="arrow"><i class="fa fa-chevron-down"></i></span>
-						</a>
-						<div class="select_option" style="display: none;">
-							<ul>
-								<li><a href="#">서울에는 유치원이 많겠지 몇개나 있을 까? 세어보자 세어</a></li>
-								<li><a href="#">경기</a></li>
-								<li><a href="#">강원도</a></li>
-								<li><a href="#">서울</a></li>
-								<li><a href="#">경기</a></li>
-								<li><a href="#">강원도</a></li>
-								<li><a href="#">서울</a></li>
-								<li><a href="#">경기</a></li>
-								<li><a href="#">강원도</a></li>
-							</ul>
-						</div>
-					</div>
-
-                <!-- //box -->
-
-				<!-- board -->
-				<h4 id="_board">Board</h4>
-					<div class="paging">
-						<a href="#" class="first"><span>처음</span></a>
-						<a href="#" class="prev"><span>이전</span></a>
-						<a href="#">1</a>
-						<a href="#">2</a>
-						<strong>3</strong>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="#" class="next"><span>다음</span></a>
-						<a href="#" class="last"><span>마지막</span></a>
-					</div>
-					<hr>
-
-					<div class="paging other">
-						<a href="#" class="first"><span>처음</span></a>
-						<a href="#" class="prev"><span>이전</span></a>
-						<a href="#">1</a>
-						<a href="#">2</a>
-						<strong>3</strong>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="#" class="next"><span>다음</span></a>
-						<a href="#" class="last"><span>마지막</span></a>
-					</div>
-					<hr>
-
-					<table class="table">
-						<caption class="hidden">회원정보</caption>
-						<colgroup>
-							<col width="200">
-							<col width="*">
-						</colgroup>
-						<tbody>
-							<tr>
-								<th>
-									<label for="member_nickname" class="head">닉네임</label>
-								</th>
-								<td>
-									<input type="text" name="member_nickname" id="member_nickname" value="고수맘이 되고 싶은 하수맘">
-									<button type="button" id="" class="button_line_large fix110">닉네임 변경</button>
-									<span class="note">*사용 가능한 닉네임입니다.</span>
-									<span class="note">*이미 사용중인 닉네임입니다.</span>
-								</td>
-							</tr>
-							<tr>
-								<th>
-									<label class="head">휴대폰 번호</label>
-								</th>
-								<td>
-									<button type="button" class="button_line_large fix130">SMS 인증하기</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<hr>
-
-					<table class="table_col">
-						<caption class="hidden">회원정보</caption>
-						<colgroup>
-							<col width="200">
-							<col width="*">
-						</colgroup>
-						<thead>
-							<tr>
-								<th>th1</th>
-								<th>th2</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<label for="member_nickname" class="head">닉네임</label>
-								</td>
-								<td>
-									<input type="text" name="member_nickname" id="member_nickname" value="고수맘이 되고 싶은 하수맘">
-									<button type="button" id="" class="button_line_large fix110">닉네임 변경</button>
-									<span class="note">*사용 가능한 닉네임입니다.</span>
-									<span class="note">*이미 사용중인 닉네임입니다.</span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="head">휴대폰 번호</label>
-								</td>
-								<td>
-									<button type="button" class="button_line_large fix130">SMS 인증하기</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				
-				<!-- //board -->
-
 
 			</div>
 		</div>
@@ -413,6 +263,7 @@
 </div>
 <div id="_top"><a href="#"><img src="./common/image/top.gif" alt="TOP"></a></div>
 <script src="../js/main.js"></script>
+<script src="../js/plugin/jquery.bxslider.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	var url = window.location.hash.split("#")[1];
@@ -438,6 +289,12 @@ $(document).ready(function() {
 			$("#_snb").stop().css({"position":"fixed", "right":"40px", "top":"20px"});
 		else   
 			$("#_snb").stop().css({"position":"static", "right":"", "top":""});
+	});
+
+	// 가게 비쥬얼 공통 슬라이드
+	$('.store_item_slider').bxSlider({
+		controls: false,
+		pager: false
 	});
 });
 </script>

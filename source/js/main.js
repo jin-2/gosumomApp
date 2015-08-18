@@ -120,7 +120,7 @@ $.fn.designCheckbox.option = {
 	overClass		: "over",
 	clickClass	: "click"
 };
-$(".dcheck").designCheckbox();
+$(".dcheck, .dcheck_type2").designCheckbox();
 
 // Design radio
 $.fn.designRadio = function(option){

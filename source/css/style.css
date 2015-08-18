@@ -21,7 +21,7 @@
 	3. page - login
 		3-2. page - password find
 	4. page - main
-   ========================================================================== */
+	 ========================================================================== */
 
 /* font-family: 'PT Sans', sans-serif; */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
@@ -30,13 +30,13 @@
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
 /* ==========================================================================
-   0. reset
-   =================== =====================================================*/
+	 0. reset
+	 =================== =====================================================*/
 html {
 	color: #222;
 	font-size: 1em;
 	line-height: 1.4;
-	font-family: "맑은 고딕", "malgun gothic", "AppleGothicNeoSD", "Apple SD 산돌고딕 Neo", "Microsoft NeoGothic",  "Droid sans", "sans-serif";
+	font-family: "맑은 고딕", "malgun gothic", "AppleGothicNeoSD", "Apple SD 산돌고딕 Neo", "Microsoft NeoGothic",    "Droid sans", "sans-serif";
 }
 body{
 	font-size: 0.75em;
@@ -77,62 +77,62 @@ input, select{
 	width: 100%;
 }
 ul, ol, li {
-  list-style: none;
+	list-style: none;
 }
 h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd, figure {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 button {
-  overflow: visible;
-  border: 0;
-  background-color: none;
+	overflow: visible;
+	border: 0;
+	background-color: none;
 }
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 input[type="text"], input[type="search"], input[type="password"], input[type="email"] {
-  box-sizing: border-box;
-  height: 40px;
-  padding: 0 10px;
-  line-height: 40px;
-  border: 1px solid #d5d5d5;
-  font-size: 14px;
-  font-size: 1.4rem;
+	box-sizing: border-box;
+	height: 40px;
+	padding: 0 10px;
+	line-height: 40px;
+	border: 1px solid #d5d5d5;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 /*input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 50px white inset;
-  -webkit-text-fill-color: #333;
+	-webkit-box-shadow: 0 0 0 50px white inset;
+	-webkit-text-fill-color: #333;
 }*/
 textarea {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 15px;
-  border: 1px solid #d5d5d5;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 15px;
+	border: 1px solid #d5d5d5;
 }
 legend {
-  position: absolute;
-  top: -9999px;
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
+	position: absolute;
+	top: -9999px;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
 }
 select {
-  height: 40px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 17px;
-  padding-right: 8px;
-  border: 1px solid #cbcbcb;
-  line-height: 26px;
+	height: 40px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 17px;
+	padding-right: 8px;
+	border: 1px solid #cbcbcb;
+	line-height: 26px;
 }
 /* ==========================================================================
-   0. Helper classes
-   ========================================================================*/
+	 0. Helper classes
+	 ========================================================================*/
 .hidden {
 	display: none !important;
 }
@@ -210,81 +210,111 @@ select {
 /*
  * 1-b. checkbox, radio
  */
+
+/*로그인 페이지 체크박스*/
 .dcheck {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
 }
 .dcheck input {
-  position: absolute;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  border: 0 none;
-  width: 16px;
-  height: 16px;
+	position: absolute;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	border: 0 none;
+	width: 16px;
+	height: 16px;
 }
 .dcheck label {
-  display: inline-block;
+	display: inline-block;
 }
 .dcheck label em {
-  display: inline-block;
-  float: left;
-  margin-top: 2px;
-  margin-right: 5px;
-  width: 12px;
-  height: 12px;
-  background: url(../img/design_input.png) no-repeat 0 0;
-  background-size: 25px 250px;
+	display: inline-block;
+	float: left;
+	margin-top: 2px;
+	margin-right: 5px;
+	width: 12px;
+	height: 12px;
+	background: url(../img/design_input.png) no-repeat 0 0;
+	background-size: 25px 250px;
 }
 .dcheck.checked label em {
-  background-position: 0px -17px;
+	background-position: 0px -17px;
+}
+
+/*공통 체크박스*/
+.dcheck_type2 {
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+.dcheck_type2 input {
+	position: absolute;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	border: 0 none;
+	width: 20px;
+	height: 20px;
+}
+.dcheck_type2 label {
+	display: inline-block;
+	padding-top: 2px;
+	color: #787878;
+}
+.dcheck_type2 label em {
+	display: inline-block;
+	float: left;
+	margin-top: -2px;
+	margin-right: 4.5px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/design_input.png) no-repeat 0 -34px;
+	background-size: 25px 250px;
+}
+
+/*진한 보라색*/
+.dcheck_type2.checked label em {
+	background-position: 0px -109px;
+}
+
+/*연한 보라색*/
+.dcheck_type2.soft.checked label em {
+	background-position: 0px -84px;
+}
+
+/*라인만*/
+.dcheck_type2.line.checked label em {
+	background-position: 0px -59px;
 }
 
 .dradio {
-  display: inline-block;
-  position: relative;
-  height: 22px;
+	display: inline-block;
+	position: relative;
+	height: 22px;
 }
 .dradio input {
-  position: absolute;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  border: 0 none;
-  width: 21px;
-  height: 21px;
+	position: absolute;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	border: 0 none;
+	width: 20px;
+	height: 20px;
 }
 .dradio label {
-  display: inline-block;
-  padding-right: 15px;
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 1.5;
+	display: inline-block;
+	padding-right: 15px;
 }
 .dradio label span {
-  display: inline-block;
-  float: left;
-  margin: 0 8px 0 0;
-  width: 21px;
-  height: 21px;
-  margin-right: 5px;
-  background: url(../img/design_input.png) no-repeat -100px -400px;
+	display: inline-block;
+	float: left;
+	margin-right: 4.5px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/design_input.png) no-repeat 0 -134px;
+	background-size: 25px 250px;
 }
 .dradio.checked label span {
-  background-position: -150px -400px;
-}
-
-.dradio.other label span {
-  width: 22px;
-}
-.dradio.other.checked label span {
-  background-position: -200px -400px;
-}
-
-.dradio.other2 label span {
-  background: url(../img/design_input.png) no-repeat 1px -439px;
-}
-.dradio.other2.checked label span {
-  background-position: -49px -439px;
+	background-position: 0 -159px;
 }
 
 /*
@@ -514,20 +544,20 @@ a:hover .badge{
  * 1-h. placeholder
  */
 .placeholder_wrap {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
 }
 .placeholder_wrap .placeholder {
-  z-index: 1;
-  position: absolute;
-  top: 11px;
-  left: 12px;
+	z-index: 1;
+	position: absolute;
+	top: 11px;
+	left: 12px;
 }
 .placeholder_wrap input {
-  position: relative;
-  z-index: 2;
-  background-color: transparent;
+	position: relative;
+	z-index: 2;
+	background-color: transparent;
 }
 
 /*
@@ -934,6 +964,9 @@ a:hover .badge{
 .main_find_wrap .find_list_title{
 	width: 80%;
 	color: #505050;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .main_find_wrap .find_list_title::before{
 	content:"";
@@ -1003,6 +1036,7 @@ a:hover .badge{
 	text-align: center;
 	letter-spacing: -1px;
 	line-height: 1.2;
+	vertical-align: top;
 }
 @media all and (max-width:374px){
 	.quick_link_wrap > a{
