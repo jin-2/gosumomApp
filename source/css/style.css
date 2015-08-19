@@ -584,9 +584,13 @@ a:hover .badge{
 }
 .navigation_wrap{
 	box-sizing: border-box;
-	padding-top: 12.5px;
-	height: 75px;
-	background-color: #f5f5f5;
+	height: 100px;
+	background-color: #7e44b0;
+}
+.navigation_wrap h1{
+	padding-top: 10px;
+	height: 20px;
+	text-align: center;
 }
 .navigation_wrap ul{
 	overflow: hidden;
@@ -596,41 +600,36 @@ a:hover .badge{
 	width: 25%;
 	text-align: center;
 }
-.gnb_main a,
-.gnb_category a,
-.gnb_mypage a,
-.gnb_more a{
+.navigation_wrap ul a{
 	display: inline-block;
+	color: #E5DAEF;
+	font-size: 0.836em;
+	text-decoration: none;
+}
+.gnb_main a::before,
+.gnb_category a::before,
+.gnb_mypage a::before,
+.gnb_more a::before{
+	content: "";
+	margin: 0 auto 3px;
+	display: block;
 	width: 45px;
 	height: 45px;
 	background: url(../img/gnb.png) no-repeat;
 	background-size: 200px 45px;
-	text-indent: -9999px;
-	transform: rotate(0);
-	-webkit-transition: .3s ease transform;
-	-moz-transition: .3s ease transform;
-	-ms-transition: .3s ease transform;
-	-o-transition: .3s ease transform;
-	transition: .3s ease transform;
+	color: #E5DAEF;
 }
-.gnb_main a{
+.gnb_main a::before{
 	background-position: 0 0;
 }
-.gnb_category a{
+.gnb_category a::before{
 	background-position: -50px 0;
 }
-.gnb_mypage a{
+.gnb_mypage a::before{
 	background-position: -100px 0;
 }
-.gnb_more a{
+.gnb_more a::before{
 	background-position: -150px 0;
-}
-.gnb_main a:focus, .gnb_main a:hover, .gnb_main.active a,
-.gnb_category a:focus, .gnb_category a:hover, .gnb_category.active a,
-.gnb_mypage a:focus, .gnb_mypage a:hover, .gnb_mypage.active a,
-.gnb_more a:focus, .gnb_more a:hover, .gnb_more.active a{
-	transform: rotate(360deg);
-	
 }
 
 /*
