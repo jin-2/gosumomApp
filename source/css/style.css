@@ -1326,7 +1326,8 @@ a:hover .badge{
 }
 .join_form{
 	max-width: 720px;
-	padding: 0 4.1666%;
+	margin: 0 auto;
+	padding: 0 4.1666% 100px;
 }
 .join_form .placeholder_wrap{
 	width: 100%;
@@ -1341,22 +1342,20 @@ a:hover .badge{
 }
 .join_form .join_agree{
 	color: #787878;
-	letter-spacing: -1px;
 }
 .join_form .join_agree a{
 	color: #787878;
 	text-decoration: underline;
 }
 .join_form .join_note{
-	margin-top: 20px;
-	color: #9E5CD8;
-	letter-spacing: -1px;
+	margin-top: 18px;
+	color: #9e5cd8;
 }
 .dcheck_type2 label{
 	padding-top: 0;
 }
 .join_form .dcheck_type2 label em{
-	margin-top: 6px;
+	margin-top: 4px;
 }
 @media all and (min-width:450px){
 	.join_form .dcheck_type2 label em{
@@ -1364,8 +1363,26 @@ a:hover .badge{
 	}
 }
 .join_form .button_confirm{
+	z-index: 10;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	height: 55px;
+	line-height: 55px;
+}
+.join_check_text{
+	padding-top: 130px;
+	font-size: 1.083em;
+	text-align: center;
+	color: #787878;
+}
+.join_check_text::before{
+	content: "";
+	display: block;
+	margin: 0 auto 16px;
+	width: 71.5px;
+	height: 77.5px;
+	background: url(../img/common.png) no-repeat 0 -50px;
+	background-size: 250px 250px;
 }
