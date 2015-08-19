@@ -74,6 +74,33 @@
 
 	});
 
+	// header hamburger menu animation
+	var toggles = document.querySelectorAll(".button_hamburger");
+	var navigation = document.querySelectorAll(".navigation_wrap");
+	console.log(navigation);
+	for (var i = toggles.length - 1; i >= 0; i--) {
+		var toggle = toggles[i];
+		toggleHandler(toggle);
+	};
+
+	function toggleHandler(toggle) {
+		toggle.addEventListener( "click", function(e) {
+			e.preventDefault();
+			//(this.classList.contains("is_active") === true) ? this.classList.remove("is_active") : this.classList.add("is_active");
+
+			if (this.classList.contains("is_active") === true) {
+				this.classList.remove("is_active");
+				navigation[0].classList.remove("is_active");
+			} else{
+				this.classList.add("is_active");
+				
+				navigation[0].classList.add("is_active");
+			};
+
+		});
+	}
+
+
 
 
 }(window, document));

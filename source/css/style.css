@@ -26,12 +26,133 @@
 /* font-family: 'PT Sans', sans-serif; */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 
-/*Normalize*/
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/* =====================================================================
+	 0. Normalize
+	===================================================================*/
+html {
+ font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+body {
+ margin: 0
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+ display: block
+}
+audio, canvas, progress, video {
+ display: inline-block; vertical-align: baseline;
+}
+audio:not([controls]) {
+ display: none; height: 0;
+}
+[hidden], template {
+ display: none
+}
+a {
+ background-color: transparent
+}
+/*a:active, a:hover {
+ outline: 0
+}*/
+abbr[title] {
+ border-bottom: 1px dotted
+}
+b, strong {
+ font-weight: bold
+}
+dfn {
+ font-style: italic
+}
+h1 {
+ font-size: 2em; margin: 0.67em 0;
+}
+mark {
+ background: #ff0; color: #000;
+}
+small {
+ font-size: 80%
+}
+sub, sup {
+ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup {
+ top: -0.5em
+}
+sub {
+ bottom: -0.25em
+}
+img {
+ border: 0
+}
+svg:not(:root) {
+ overflow: hidden
+}
+figure {
+ margin: 1em 40px
+}
+hr {
+ box-sizing: content-box; height: 0;
+}
+pre {
+ overflow: auto
+}
+code, kbd, pre, samp {
+ font-family: monospace, monospace; font-size: 1em;
+}
+button, input, optgroup, select, textarea {
+ color: inherit; font: inherit; margin: 0;
+}
+button {
+ overflow: visible
+}
+button, select {
+ text-transform: none
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+ -webkit-appearance: button; cursor: pointer;
+}
+button[disabled], html input[disabled] {
+ cursor: default
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+ border: 0; padding: 0;
+}
+input {
+ line-height: normal
+}
+input[type="checkbox"], input[type="radio"] {
+ box-sizing: border-box; padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+ height: auto
+}
+input[type="search"] {
+ -webkit-appearance: textfield; box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+ -webkit-appearance: none
+}
+fieldset {
+ border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em;
+}
+legend {
+ border: 0; padding: 0;
+}
+textarea {
+ overflow: auto
+}
+optgroup {
+ font-weight: bold
+}
+table {
+ border-collapse: collapse; border-spacing: 0;
+}
+td, th {
+ padding: 0
+}
 
-/* ==========================================================================
+/* =====================================================================
 	 0. reset
-	 =================== =====================================================*/
+	===================================================================*/
 html {
 	color: #222;
 	font-size: 1em;
@@ -562,30 +683,60 @@ a:hover .badge{
  * 2. layout
  * 2-a. header
  ********************************************/
-.header_top_wrap{
+.header{
+	position: relative;
 	padding: 0 4.1666%;
 	height: 40px;
 	background-color: #9e5cd8;
 }
-.header_top_wrap .logo{
+.header .logo{
 	float: left;
 	font-size: 0;
 }
-.header_top_wrap .logo a{
+.header .logo a{
 	display: block;
 	padding: 13.5px 0;
 }
-.header_top_wrap .button_search{
-	float: right;
-	padding:9.5px 0 9.5px 9px;
+.header .button_search{
+	position: absolute;
+	top: 0;
+	right: 4.1666%;
+	display: block;
+	margin-right: -9px;
+	padding:9px 9px 9.5px;
+}
+.header .button_search span{
 	width: 21.5px;
 	height: 21px;
-	background-position: -98px 9.5px;
+	background-position: -105px 0px;
+	vertical-align: top;
+}
+.header .button_hamburger_wrap{
+	position: absolute;
+	top: 0;
+	left: 4.1666%;
+	margin-left: -9.5px;
+	width: 39.5px;
+}
+.header .title{
+	display: block;
+	margin: 0 40px;
+	padding-top: 8px;
+	text-align: center;
+	font-size: 1.5em;
+}
+.header .title a{
+	color: #fff;
 }
 .navigation_wrap{
+	display: none;
 	box-sizing: border-box;
+	width: 100%;
 	height: 100px;
 	background-color: #7e44b0;
+}
+.navigation_wrap.is_active{
+	display: block;
 }
 .navigation_wrap h1{
 	padding-top: 10px;
@@ -630,6 +781,88 @@ a:hover .badge{
 }
 .gnb_more a::before{
 	background-position: -150px 0;
+}
+
+/*header hamburger menu*/
+.button_hamburger {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 39.5px;
+	height: 39.5px;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	border: none;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+.button_hamburger span {
+	display: block;
+	position: absolute;
+	top: 18.5px;
+	left: 9.5px;
+	right: 9.5px;
+	height: 1.5px;
+	background: white;
+	border-radius: 1px;
+}
+.button_hamburger span::before,
+.button_hamburger span::after {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 1.5px;
+	background-color: #fff;
+	content: "";
+	border-radius: 1px;
+}
+.button_hamburger span::before {
+	top: -8px;
+}
+.button_hamburger span::after {
+	bottom: -8px;
+}
+
+/*sp*/
+.button_hamburger {
+	background-color: transparent;
+}
+.button_hamburger span {
+	transition: background 0s 0.3s;
+}
+.button_hamburger span::before,
+.button_hamburger span::after {
+	transition-duration: 0.3s, 0.3s;
+	transition-delay: 0.3s, 0s;
+}
+.button_hamburger span::before {
+	transition-property: top, transform;
+}
+.button_hamburger span::after {
+	transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.button_hamburger.is_active span {
+	background: none;
+}
+.button_hamburger.is_active span::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+.button_hamburger.is_active span::after {
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+.button_hamburger.is_active span::before,
+.button_hamburger.is_active span::after {
+	transition-delay: 0s, 0.3s;
 }
 
 /*
