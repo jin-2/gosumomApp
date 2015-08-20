@@ -46,269 +46,280 @@
 		<p class="join_step_progress"><img src="../img/join_step3.png" alt="이메일 가입 절차 마지막 맘정보설정 입니다. 이전은 이메일 가입을 위한 정보입력과 본인인증을 하셨습니다." width="310"></p>
 		<form action="#" class="mom_setting_form">
 			<!-- 프로필 사진 -->
-			<div class="profile_photo_wrap">
+			<section class="section">
 				<div class="profile_photo">
 					<input type="file" name="" id="">
 					<img src="http://lorempixel.com/75/75/people" alt="">
 					<span class="icon_camera common_bg"></span>
 				</div>
-			</div>
+			</section>
 			
 			<!-- 거주지 -->
-			<div>
-				<strong>거주지</strong>
-				<a href="#">거주지 설정하러 가기</a>
-			</div>
+			<section class="section">
+				<div class="set_address">
+					<h3 class="field_label">거주지</h3>
+					<a href="#" class="button_search_address"><span class="icon_arrow_right common_bg">거주지 설정하러 가기</span></a>
+				</div>
+				<div class="get_address_area"><div>허리도 가늘군 만지면 부서지리 36-24-34</div></div>
+			</section>
 			
 			<!-- 아이정보 -->
-			<div>
-				<strong>아이정보</strong>
-				<div class="set_radio">
-					<span class="dradio">
-						<input type="radio" name="is_children" id="is_children1" /> 
-						<label for="is_children1"><span></span>없어요</label>
-					</span>
-					<span class="dradio checked">
-						<input type="radio" name="is_children" id="is_children2" /> 
-						<label for="is_children2"><span></span>있어요</label>
-					</span>
+			<section class="section setting_children">
+				<div class="set_children">
+					<h3 class="field_label">아이정보</h3>
+					<div class="set_radio">
+						<span class="dradio">
+							<input type="radio" name="is_children" id="is_children1" /> 
+							<label for="is_children1"><span></span>없어요</label>
+						</span>
+						<span class="dradio checked">
+							<input type="radio" name="is_children" id="is_children2" /> 
+							<label for="is_children2"><span></span>있어요</label>
+						</span>
+					</div>
 				</div>
-			</div>
 
-			<!-- 자녀 수 선택 -->
-			<div>
-				<strong>자녀 수 선택</strong>
-				<div class="selectbox">
-					<label for="children_number"><em class="children_number_value">1</em>명</label>
-					<select id="children_number">
-						<option selected="selected">1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-					</select>
+				<!-- 자녀 수 선택 -->
+				<div class="children_info_wrap">
+					<div class="set_children_number">
+						<strong class="label">자녀 수 선택</strong>
+						<div class="selectbox">
+							<label for="children_number"><em class="children_number_value">1</em>명</label>
+							<select id="children_number">
+								<option selected="selected">1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- 자녀 수 선택 후 자녀 정보 -->
+					<div class="children_info_wrap">
+						<div class="set_radio">
+							<span class="dradio">
+								<input type="radio" name="is_children" id="is_children1" /> 
+								<label for="is_children1"><span></span>여아</label>
+							</span>
+							<span class="dradio checked">
+								<input type="radio" name="is_children" id="is_children2" /> 
+								<label for="is_children2"><span></span>남아</label>
+							</span>
+						</div>
+						<div class="selectbox">
+							<label for="children_number">생년월일: <em class="children_number_value">2009. 06. 15</em></label>
+							<select id="children_number">
+								<option selected="selected">1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+							</select>
+						</div>
+					</div>
 				</div>
-			</div>
 
-			<!-- 자녀 수 선택 후 자녀 정보 -->
-			<div class="children_info_wrap">
-				<div class="set_radio">
-					<span class="dradio">
-						<input type="radio" name="is_children" id="is_children1" /> 
-						<label for="is_children1"><span></span>여아</label>
+				
+			</section>
+
+			<section class="section">
+				<h3 class="field_label">관심분야</h3>
+
+				<!-- 참석 도우미 -->
+				<div class="interest_area">
+					<span class="dcheck_type2">
+						<input type="checkbox" id="category1" name="" value="" >
+						<label for="category1"><em></em>참석 도우미</label>
 					</span>
-					<span class="dradio checked">
-						<input type="radio" name="is_children" id="is_children2" /> 
-						<label for="is_children2"><span></span>남아</label>
+					<ul>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category1_1" name="" value="" >
+								<label for="category1_1"><em></em>학교급식 도우미</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category1_2" name="" value="" >
+								<label for="category1_2"><em></em>행사 도우미</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category1_3" name="" value="" >
+								<label for="category1_3"><em></em>어린이집 참석</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category1_4" name="" value="" >
+								<label for="category1_4"><em></em>유치원 참석</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category1_5" name="" value="" >
+								<label for="category1_5"><em></em>학교 참석</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category1_6" name="" value="" >
+								<label for="category1_6"><em></em>학원 참석</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category1_7" name="" value="" >
+								<label for="category1_7"><em></em>녹색어머니회</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 음식 -->
+				<div class="interest_area">
+					<span class="dcheck_type2">
+						<input type="checkbox" id="category2" name="" value="" >
+						<label for="category2"><em></em>음식</label>
 					</span>
+					<ul>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_1" name="" value="" >
+								<label for="category2_1"><em></em>분식/간식</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_2" name="" value="" >
+								<label for="category2_2"><em></em>반찬</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_3" name="" value="" >
+								<label for="category2_3"><em></em>출장요리/뷔페</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_4" name="" value="" >
+								<label for="category2_4"><em></em>건강식(보양식)</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_5" name="" value="" >
+								<label for="category2_5"><em></em>이유식</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_6" name="" value="" >
+								<label for="category2_6"><em></em>제과/제빵</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_7" name="" value="" >
+								<label for="category2_7"><em></em>떡/케잌</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_8" name="" value="" >
+								<label for="category2_8"><em></em>제사음식</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_9" name="" value="" >
+								<label for="category2_9"><em></em>별식/퓨전요리</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_10" name="" value="" >
+								<label for="category2_10"><em></em>집들이 음식</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_11" name="" value="" >
+								<label for="category2_11"><em></em>국</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category2_12" name="" value="" >
+								<label for="category2_12"><em></em>반찬</label>
+							</span>
+						</li>
+					</ul>
 				</div>
-				<div class="selectbox">
-					<label for="children_number">생년월일: <em class="children_number_value">2009. 06. 15</em></label>
-					<select id="children_number">
-						<option selected="selected">1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-					</select>
+
+				<!-- 학습 도우미 -->
+				<div class="interest_area">
+					<span class="dcheck_type2">
+						<input type="checkbox" id="category3" name="" value="" >
+						<label for="category3"><em></em>학습 도우미</label>
+					</span>
+					<ul>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category3_1" name="" value="" >
+								<label for="category3_1"><em></em>동화구연</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category3_2" name="" value="" >
+								<label for="category3_2"><em></em>놀이선생님</label>
+							</span>
+						</li>
+					</ul>
 				</div>
-			</div>
 
-			<strong>관심분야</strong>
-
-			<!-- 참석 도우미 -->
-			<div class="interest_area">
-				<span class="dcheck_type2">
-					<input type="checkbox" id="category1" name="" value="" >
-					<label for="category1"><em></em>참석 도우미</label>
-				</span>
-				<ul>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category1_1" name="" value="" >
-							<label for="category1_1"><em></em>학교급식 도우미</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category1_2" name="" value="" >
-							<label for="category1_2"><em></em>행사 도우미</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category1_3" name="" value="" >
-							<label for="category1_3"><em></em>어린이집 참석</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category1_4" name="" value="" >
-							<label for="category1_4"><em></em>유치원 참석</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category1_5" name="" value="" >
-							<label for="category1_5"><em></em>학교 참석</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category1_6" name="" value="" >
-							<label for="category1_6"><em></em>학원 참석</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category1_7" name="" value="" >
-							<label for="category1_7"><em></em>녹색어머니회</label>
-						</span>
-					</li>
-				</ul>
-			</div>
-
-			<!-- 음식 -->
-			<div class="interest_area">
-				<span class="dcheck_type2">
-					<input type="checkbox" id="category2" name="" value="" >
-					<label for="category2"><em></em>음식</label>
-				</span>
-				<ul>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_1" name="" value="" >
-							<label for="category2_1"><em></em>분식/간식</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_2" name="" value="" >
-							<label for="category2_2"><em></em>반찬</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_3" name="" value="" >
-							<label for="category2_3"><em></em>출장요리/뷔페</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_4" name="" value="" >
-							<label for="category2_4"><em></em>건강식(보양식)</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_5" name="" value="" >
-							<label for="category2_5"><em></em>이유식</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_6" name="" value="" >
-							<label for="category2_6"><em></em>제과/제빵</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_7" name="" value="" >
-							<label for="category2_7"><em></em>떡/케잌</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_8" name="" value="" >
-							<label for="category2_8"><em></em>제사음식</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_9" name="" value="" >
-							<label for="category2_9"><em></em>별식/퓨전요리</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_10" name="" value="" >
-							<label for="category2_10"><em></em>집들이 음식</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_11" name="" value="" >
-							<label for="category2_11"><em></em>국</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category2_12" name="" value="" >
-							<label for="category2_12"><em></em>반찬</label>
-						</span>
-					</li>
-				</ul>
-			</div>
-
-			<!-- 학습 도우미 -->
-			<div class="interest_area">
-				<span class="dcheck_type2">
-					<input type="checkbox" id="category3" name="" value="" >
-					<label for="category3"><em></em>학습 도우미</label>
-				</span>
-				<ul>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category3_1" name="" value="" >
-							<label for="category3_1"><em></em>동화구연</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category3_2" name="" value="" >
-							<label for="category3_2"><em></em>놀이선생님</label>
-						</span>
-					</li>
-				</ul>
-			</div>
-
-			<!-- 베이비시터 -->
-			<div class="interest_area">
-				<span class="dcheck_type2">
-					<input type="checkbox" id="category3" name="" value="" >
-					<label for="category3"><em></em>베이비시터</label>
-				</span>
-				<ul>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category3_1" name="" value="" >
-							<label for="category3_1"><em></em>평일 단기</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category3_2" name="" value="" >
-							<label for="category3_2"><em></em>주말 단기</label>
-						</span>
-					</li>
-					<li>
-						<span class="dcheck_type2">
-							<input type="checkbox" id="category3_3" name="" value="" >
-							<label for="category3_3"><em></em>공휴일 단기</label>
-						</span>
-					</li>
-				</ul>
-			</div>
+				<!-- 베이비시터 -->
+				<div class="interest_area">
+					<span class="dcheck_type2">
+						<input type="checkbox" id="category3" name="" value="" >
+						<label for="category3"><em></em>베이비시터</label>
+					</span>
+					<ul>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category3_1" name="" value="" >
+								<label for="category3_1"><em></em>평일 단기</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category3_2" name="" value="" >
+								<label for="category3_2"><em></em>주말 단기</label>
+							</span>
+						</li>
+						<li>
+							<span class="dcheck_type2">
+								<input type="checkbox" id="category3_3" name="" value="" >
+								<label for="category3_3"><em></em>공휴일 단기</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</section>
 
 			<button type="button" class="button_flat">설정완료</button>
 		</form>
