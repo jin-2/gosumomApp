@@ -1388,3 +1388,23 @@ a:hover .badge{
 	background: url(../img/common.png) no-repeat 26px -50px;
 	background-size: 250px 250px;
 }
+
+/*맘정보설정*/
+.mom_setting_form{
+	max-width: 720px;
+	margin: 0 auto;
+}
+.profile_photo{
+	position: relative;
+	width: 75px;
+	height: 75px;
+}
+.profile_photo .icon_camera{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 20px;
+}
+.profile_photo input[type="file"]{
+
+}
