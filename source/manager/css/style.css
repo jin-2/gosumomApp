@@ -126,4 +126,168 @@ table {
 /*td, th {
  padding: 0
 }*/
+html {
+	color: #323232;
+	font-size: 16px;
+	line-height: 1.4;
+}
+body{
+	font-size: 0.75em;
+}
+hr {
+	display: none;
+}
+audio, canvas, iframe, img, svg, video {
+	vertical-align: top;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	resize: vertical;
+}
+div, input, select{
+	box-sizing: border-box;
+}
+input, select{
+	width: 100%;
+}
+ul, ol, li {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd, figure, section {
+	margin: 0;
+	padding: 0;
+}
+button {
+	overflow: visible;
+	border: 0;
+	background-color: none;
+}
+a,
+a:hover {
+	text-decoration: none;
+}
+input[type="text"], input[type="search"], input[type="password"], input[type="email"] {
+	box-sizing: border-box;
+	height: 50px;
+	padding: 10px;
+	border: 0;
+	border-radius: 2px;
+	color: #323232;
+	line-height: 30px;
+}
+/*input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 50px white inset;
+	-webkit-text-fill-color: #333;
+}*/
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 15px;
+	border: 1px solid #d5d5d5;
+}
+legend {
+	position: absolute;
+	top: -9999px;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+select {
+	height: 40px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 17px;
+	padding-right: 8px;
+	border: 1px solid #cbcbcb;
+	line-height: 26px;
+}
+
+/*header*/
+.header{
+	overflow: hidden;
+	border-bottom: 1px solid #9e5cd8;
+}
+/*.header .top{
+	box-sizing: border-box;
+	padding-top: 14px;
+	height: 49px;
+}*/
+.header .logo{
+	float: left;
+	padding: 14px 20px 15px;
+	line-height: 0;
+}
+.header .user_menu{
+	float: right;
+	padding-top: 12px;
+}
+.gnb_wrap{
+	clear: both;
+	border-top: 1px solid #c8c8c8;
+}
+.gnb_wrap ul{
+	overflow: hidden;
+}
+.gnb_wrap li{
+	float: left;
+	width: 16.66%;
+}
+.gnb_wrap li a{
+	box-sizing: border-box;
+	display: block;
+	padding-top: 21px;
+	border-right: 1px solid #dcdcdc;
+	width: 100%;
+	height: 100px;
+	color: #323232;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+.gnb_wrap li a:hover,
+.gnb_wrap li a:focus,
+.gnb_wrap li.active a{
+	background-color: #9e5cd8;
+	color: #fff;
+}
+
+/*gnb icon*/
+.gnb_wrap li a::before{
+	content:"";
+	display: block;
+	margin: 0 auto 6px;
+	width: 44px;
+	height: 40px;
+	background: url(../img/icon.png) no-repeat;
+}
+
+li.gnb_store a::before{
+	background-position: 0 0;
+}
+li.gnb_member a::before{
+	background-position: -50px 0;
+}
+li.gnb_manage a::before{
+	background-position: -100px 0;
+}
+li.gnb_order a::before{
+	background-position: -150px 0;
+}
+li.gnb_sales a::before{
+	background-position: -200px 0;
+}
+li.gnb_calculate a::before{
+	background-position: -250px 0;
+}
+
+.gnb_wrap li a:hover::before,
+.gnb_wrap li a:focus::before,
+.gnb_wrap li.active a::before{
+	background-position-y: -45px;
+}
 
