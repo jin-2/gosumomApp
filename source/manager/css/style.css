@@ -170,6 +170,9 @@ a,
 a:hover {
 	text-decoration: none;
 }
+a{
+	color: #323232;
+}
 input[type="text"], input[type="search"], input[type="password"], input[type="email"] {
 	box-sizing: border-box;
 	height: 50px;
@@ -388,6 +391,9 @@ li.gnb_calculate a::before{
 	font-size: 14px;
 	color: #323232;
 }
+.snb a:hover{
+	text-decoration: underline;
+}
 .snb a.active,
 .snb a:focus{
 	color: #9E5CD8;
@@ -540,4 +546,8 @@ li.gnb_calculate a::before{
 	padding-left: 20px;
 	padding-right: 20px;
 	text-align: left;
+}
+
+.board a{
+	color: #3F3494;
 }
