@@ -31,26 +31,50 @@
 	</div class="header">
 
 	<div class="breadcrumbs">
-		<span>홈</span>
+		<span class="home"><img src="../img/home.png" alt="Home"></span>
 		<span>주문관리</span>
-		<strong>전체 결제내역</strong>
+		<strong class="current">전체 결제내역</strong>
 	</div>
 
-	<div class="contents_wrap">
+	<div id="contents_wrap" class="contents_wrap">
 		<!-- snb -->
-		<div class="sub_wrap">
-			<h2>주문관리</h2>
-			<ul>
-				<li><a href="#">전체 결제내역</a></li>
-			</ul>
+		<div id="snb" class="snb_wrap">
+			<button type="button" class="button_snb_toggle">왼쪽메뉴 열고닫기</button>
+			<div class="inner">
+				<h2 class="title_h2">주문관리</h2>
+				<ul class="snb">
+					<li><a href="#" class="active">전체 결제내역</a>
+						<ul>
+							<li><a href="#">이벤트 목록</a></li>
+							<li><a href="#">이벤트 목록</a></li>
+							<li><a href="#">이벤트 목록</a></li>
+							<li><a href="#">이벤트 목록</a></li>
+						</ul>
+					</li>
+					<li><a href="#">전체 결제내역</a>
+						<ul>
+							<li><a href="#">이벤트 목록</a></li>
+							<li><a href="#">이벤트 목록</a></li>
+							<li><a href="#">이벤트 목록</a></li>
+							<li><a href="#">이벤트 목록</a></li>
+						</ul>
+					</li>
+					<li><a href="#">전체 결제내역</a></li>
+					<li><a href="#">전체 결제내역</a></li>
+				</ul>
+			</div>
 		</div>
 		<!-- // snb -->
-
-		<div class="contents">
-			<h3>전체 결제내역</h3>
-			<button type="button">주문일로 보기</button>
-			<button type="button">주문처리흐름으로 보기</button>
-			<table>
+		
+		<!-- contents -->
+		<div id="contents" class="contents">
+			<h3 class="title_h3">전체 결제내역</h3>
+			<button type="button" class="button mini gray arrow_gray">주문일로 보기</button>
+			<button type="button" class="button mini arrow_red">주문처리흐름으로 보기</button>
+			<button type="button" class="button big">주문처리흐름으로 보기</button>
+			<button type="button" class="button big purple">주문처리흐름으로 보기</button> 
+			<button type="button" class="button big purple search">검색</button> 
+			<table class="board center">
 				<thead>
 					<tr>
 						<th><input type="checkbox" name="" id=""></th>
@@ -79,7 +103,35 @@
 					</tr>
 				</tbody>
 			</table>
+
+			<table class="board left">
+				<colgroup>
+					<col width="15%">
+					<col wdith="*">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>제목1</th>
+						<td>내용내용내용</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- paging -->
+			<div class="paging">
+				<a href="#" class="first"><img src="../img/paging_first.png" alt="처음으로"></a>
+				<a href="#" class="prev"><img src="../img/paging_prev.png" alt="이전"></a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<strong>3</strong>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="next"><img src="../img/paging_next.png" alt="다음"></a>
+				<a href="#" class="last"><img src="../img/pagin_last.png" alt="마지막으로"></a>
+			</div>
+			<!-- // paging -->
 		</div>
+		<!-- // contents -->
 	</div>
 
 
