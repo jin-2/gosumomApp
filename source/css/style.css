@@ -1492,3 +1492,7 @@ a:hover .badge{
 	display: inline-block;
 	padding-top: 4px;
 }
+
+.page_manager_login{
+	background-color: #373447;
+}
