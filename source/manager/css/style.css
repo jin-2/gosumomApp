@@ -297,6 +297,15 @@ li.gnb_sales a::before{
 li.gnb_calculate a::before{
 	background-position: -250px 0;
 }
+li.gnb_setting a::before{
+	background-position: -350px 0;
+}
+li.gnb_item a::before{
+	background-position: -300px 0;
+}
+li.gnb_original a::before{
+	background-position: -400px 0;
+}
 
 .gnb_wrap li a:hover::before,
 .gnb_wrap li a:focus::before,
