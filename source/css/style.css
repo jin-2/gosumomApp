@@ -850,7 +850,7 @@ a:hover .badge{
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
-	top: 11.5px;
+	top: 10.5px;
 	left: 12.25px;
 }
 .button_hamburger.is_active span:nth-child(2) {
